@@ -32,6 +32,8 @@
  * il pourra être sous linux mais pas sous apple, car apple je les aimes pas trop 
  * dsl la communoté d'apple, balle gratuites
  * 
+ * @warning Attention j'ai mis des autre dossier dans la lib donc effacer les dossier dans les language qui vous interraisse pas et coppier le contenu du dossier qui vous interraisse dans Tina_Tools pour éviter des error d'inclusion du language C++ a cause de Tina_TOOLS/Tina_TOOLS
+ * 
  *
  * @section sec_contributors Contributeurs
  * - Créateur de la librairie : Tina

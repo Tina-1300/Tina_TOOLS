@@ -38,6 +38,7 @@
 #include <iostream>
 #include <string>
 #include <algorithm> // reverse
+#include <bitset> // pour le binaire ce renseigner sur la doc 
 
 /**
  * @def CONSOLE_UTF8
@@ -133,6 +134,16 @@ public:
         }else{
             return Tina_FALSE;
         }
+    }
+
+
+    static std::string Tina_convert_string_to_binary(std::string str){
+        std::string  binaryString;
+        for (std::size_t i = 0; i < str.size(); i++){
+            //std::cout << std::bitset<8>(str[i]) << std::endl;
+            binaryString += std::bitset<8>(str[i]).to_string();
+        }
+        return  binaryString;
     }
 
     /**

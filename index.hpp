@@ -48,7 +48,7 @@
  * - **https://drive.google.com/file/d/1yxOdbWSnYztpM2vGCU97XV8PhcM2jLlE/view?usp=drive_link**
  * 
  * @section sec_donate Donations
- * Si vous souhaitez soutenir le développement de ce projet, vous pouvez faire une donation en Bitcoin à l'adresse suivante : **bc1qts8q0lqd75nf5wxvl54g8rqc6mjj9wumszkn4h**
+ * Si vous souhaitez soutenir ce projet, vous pouvez faire une donation en Bitcoin à l'adresse suivante : **bc1qts8q0lqd75nf5wxvl54g8rqc6mjj9wumszkn4h**
  * 
  * @section sec_information Information
  * @author Tina

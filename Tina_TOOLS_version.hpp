@@ -40,7 +40,6 @@ private:
 public:
     /**
      * @fn Version()
-     * @param [void] attend Rien en paramètre
      * @note Cette fonction indique la version de la librairie 
      * 
      * Cette fonction affiche dans le terminal la version de la librairie 
@@ -58,7 +57,7 @@ public:
      * }
      * ```
     */
-    static void Version(void){
+    static void Version(){
         std::cout << "Version : 0.2" << std::endl;
     }
 

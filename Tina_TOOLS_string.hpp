@@ -72,10 +72,9 @@ private:
 
 
 public:
-
     /**
      * @fn Tina_reverseString()
-     * @param [std::string] attend une chaine de caractère qui et la chaine de caractère a inverser
+     * @param [std::string str] attend une chaine de caractère qui et la chaine de caractère a inverser
      * @note Cette fonction permet de d'inverser une chaine de caractère
      * 
      * Cette fonction permet de d'inverser une chaine de caractère
@@ -102,8 +101,8 @@ public:
     
     /**
      * @fn Tina_Compare()
-     * @param [std::string] attend une chaine de caractère a comparer 
-     * @param [const char *] attend la chaine de caractère a comparer a la première 
+     * @param [std::string str] attend une chaine de caractère a comparer 
+     * @param [const char *str_a_comparer] attend la chaine de caractère a comparer a la première 
      * @note Cette fonction permet de comparer la chaine de caractère du premier paramètre au second
      * 
      * Cette fonction permet de comparer la chaine de caractère du premier paramètre au second

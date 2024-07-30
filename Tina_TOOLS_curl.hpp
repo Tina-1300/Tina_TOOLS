@@ -71,7 +71,7 @@ public:
 
     /**
      * @fn Tina_Get_STATUS_HTTP_URL()
-     * @param [std::string& url] attend une chaine de caractère qui et l'url
+     * @param [std::string url] attend une chaine de caractère qui et l'url
      * @note Cette fonction permet d'avoir le retout du statu http d'une url
      * 
      * Cette fonction permet de télécharger un fichier 

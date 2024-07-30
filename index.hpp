@@ -14,8 +14,8 @@
  * pour fonctionner comme ça vous pouvez supprimmer tout les autres class et garder que le nécessaire
  * je suis entre débutant et intermédière en C++, donc nésiter pas a me prévenir par email si 
  * vous remarquer des faill de sécurité, préciser ou elle ce trouve et comment je pourrais y corriger
- * sinon contacte mois soit pour demander de participer au projet je ne travaille pas avec git pas
- * encore, ou vous pouvez aussi me demander d'inclure vos propres function ou vos propres classe
+ * sinon contacte mois soit pour demander de participer au projet, 
+ * ou vous pouvez aussi me demander d'inclure vos propres function ou vos propres classe
  * ou me proposer de nouvelle function a ajouter.
  * 
  * mon email : tina.xytrfgthuji1348@gmail.com
@@ -24,7 +24,7 @@
  * et si vous avez participer a la sécurité en corrigant une faill avec une correction de mes function
  * vous serais dans mentioner dans la section Sécurité et tout ceux qui sont dans la section 
  * Sécurité ou Contributeurs vous avez le droit de me demander de mettre un lien dans Soutien à 
- * d'autres projet. 
+ * d'autres projet.
  * 
  * la version 0.3 de la librairie sort le 13 septembre 
  * 

@@ -1,5 +1,5 @@
 ### update de la 0.4
-Udpate de la documentation disponible dans 28 jour 
+Udpate de la documentation disponible dans 23 jour ou moins
 and update de la librairie avec de nouvelle class 
 comme Clara_vector.hpp qui permet de géré les vector 
 ajout de la fonction input dans Tina_TOOLS_string.hpp 

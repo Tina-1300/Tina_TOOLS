@@ -1,5 +1,5 @@
 /**
- * @file TINA_TOOLS_sha.hpp
+ * @file Tina_TOOLS_sha.hpp
  * @brief Cette class permet de gérez la famille des sha elle traite les SHA-1, SHA-224, SHA-256, SHA-384, SHA-512  
  * 
  * @note Vous pouvez compiler votre programme avec la ligne de commande ci-dessous si vous utiliser cette classe.
@@ -44,15 +44,8 @@
 #include <sstream> // Pour std::stringstream
 #include <cstring> // Pour std::strlen
 
-/**
- * @def CONSOLE_UTF8
- * @brief permet d'afficher les caractère en UTF_8
- */
-#define CONSOLE_UTF8 SetConsoleOutputCP(65001)
 
-
-
-class TINA_TOOLS_sha{
+class Tina_TOOLS_sha{
 private:
     static std::string hashToString(const unsigned char *hash, size_t length){
         std::stringstream ss;
@@ -78,11 +71,11 @@ public:
      * 
      * ```c
      *  #include <iostream>
-     *  #include "Tina_TOOLS/TINA_TOOLS_sha.hpp"
+     *  #include "Tina_TOOLS/Tina_TOOLS_sha.hpp"
      * 
      * int main(){
      *     CONSOLE_UTF8;
-     *     TINA_TOOLS_sha sha_tin;
+     *     Tina_TOOLS_sha sha_tin;
      *     std::string message_urg = "Tina";
      *     std::cout << "sha Tina 512 : " << sha_tin.Hash_STRING_SHA__(message_urg, SHA512_DIGEST_LENGTH) << std::endl; 
      *     

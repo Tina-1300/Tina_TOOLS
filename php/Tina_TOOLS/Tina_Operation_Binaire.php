@@ -40,10 +40,9 @@ class Tina_Operation_Binaire{
 
 }
 
+
 /*$Tina_opp = new Tina_Operation_Binaire();
 echo $Tina_opp->Tina_Operation_Bits("00101", "10110", "xor");*/
-
-
 
 
 ?>

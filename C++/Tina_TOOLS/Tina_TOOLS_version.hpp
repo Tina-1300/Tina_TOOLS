@@ -50,7 +50,6 @@ public:
      * #include #include "Tina_TOOLS/Tina_TOOLS_version.hpp"
      * 
      * int main(){
-     *     CONSOLE_UTF8;
      *     Tina_TOOLS_version info;
      *     info.Version();   
      *     return 0; 
@@ -58,7 +57,7 @@ public:
      * ```
     */
     static void Version(){
-        std::cout << "Version : 0.2" << std::endl;
+        std::cout << "Version : 0.4" << std::endl;
     }
 
 

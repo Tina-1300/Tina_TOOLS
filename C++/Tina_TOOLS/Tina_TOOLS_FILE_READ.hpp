@@ -87,9 +87,10 @@ public:
             std::bitset<8> binaryValue(static_cast<unsigned char>(ch));
             //std::cout << binaryValue << ' ';
         }
-
         file.close();
     }
+
+    // lire un fichier en hexadecimale après 
 
 
 };

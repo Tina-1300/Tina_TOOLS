@@ -28,7 +28,6 @@
 #ifndef Tina_TOOLS_curl_
 #define Tina_TOOLS_curl_
 
-#include <windows.h>
 
 // En-têtes CURL
 #include <curl/curl.h>
@@ -37,11 +36,6 @@
 #include <iostream>
 #include <string>
 
-/**
- * @def CONSOLE_UTF8
- * @brief permet d'afficher les caractère en UTF_8
- */
-#define CONSOLE_UTF8 SetConsoleOutputCP(65001)
 
 /**
  * @def ERROR_EMPTY_URL
@@ -168,6 +162,25 @@ public:
         }
     }
 
+
+    // téléversement d'un fichier local sur un server
+    static void tin_curl_upload_data(const std::string& url){
+        CURL *curl;
+        CURLcode res;
+        curl = curl_easy_init();
+        if(curl){
+            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            Skip_SSL_Certificate_Verification(curl);
+            //définir les autre paramèrre
+
+            res = curl_easy_perform(curl);
+            if(res != CURLE_OK){
+                std::cerr << "Erreur lors du télévairsement : " << curl_easy_strerror(res) << std::endl;
+                curl_easy_cleanup(curl);
+            }
+            curl_easy_cleanup(curl);
+        }
+    }
 
 
 };

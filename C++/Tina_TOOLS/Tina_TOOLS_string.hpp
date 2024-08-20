@@ -22,29 +22,18 @@
  * 
  * @author Tina
  * @date 28/07/2024
- * @version 0.2
+ * @version 0.3
  * @copyright Copyright 2024 Tina - Tous droits réservés
 */
 
 #ifndef Tina_TOOLS_string_
 #define Tina_TOOLS_string_
 
-
-#ifdef _WIN32
-#include <windows.h>
-#endif
-
 // Autres inclusion
 #include <iostream>
 #include <string>
 #include <algorithm> // reverse
 #include <bitset> // pour le binaire ce renseigner sur la doc 
-
-/**
- * @def CONSOLE_UTF8
- * @brief permet d'afficher les caractère en UTF_8
- */
-#define CONSOLE_UTF8 SetConsoleOutputCP(65001)
 
 
 /**
@@ -137,8 +126,8 @@ public:
     }
 
     /**
-     * @fn Tina_convert_string_to_binary()
-     * @param [std::string str] attend une chaine de caractère a comparer 
+     * @fn Tina_convert_string_to_binary()                
+     * @param [std::string str] attend une chaine de caractère a convertir en caractère binaire 
      * @note Cette fonction permet de traduire une chaine de caractère en binaire
      * 
      * Cette fonction permet de traduire une chaine de caractère en binaire
@@ -170,7 +159,7 @@ public:
     /**
      * @fn Tina_is_palindrome()
      * @param [std::string strr] attend une chaine de caractère a vérifier si il et palindrom
-     * @param [int Tina_return_bool_] et pas obligatoir mais si vous l'utiliser en mettant Tina_return_bool aulieu de retourner le mot entre il returnera Tina_TRUE ou Tina_FALSE
+     * @param [int Tina_return_bool_] et pas obligatoir il retounera quand même Tina_TRUE ou Tina_FALSE si le mot et palindrom ou non
      * @note Cette fonction et une function surcharger qui permet de voir si un mot et palindrom
      * 
      * Cette fonction et une function surcharger qui permet de voir si un mot et palindrom
@@ -201,9 +190,48 @@ public:
             }else{
                 return Tina_FALSE;
             }
+        }else{
+            std::string p = strr;
+            std::string l = Tina_reverseString(p);
+            if(l == p){
+                return Tina_TRUE; 
+            }else{
+                return Tina_FALSE;
+            }  
         }
 
     }
+
+    /**
+     * @fn input()
+     * @param [const std::string& prompt] attend une chaine de caractère qui et la chaine prompt
+     * @note Cette fonction permet de faire comme la fonction input de python mais pour les chaine de caractère std::string en C++
+     * @warning A mettre dans la doc 
+     * 
+     * Cette fonction permet de faire comme la fonction input de python mais pour les chaine de caractère std::string en C++
+     * 
+     * Example d'utilisation : 
+     * 
+     * ```c
+     * #include <iostream>
+     * #include "Tina_TOOLS/Tina_TOOLS_string.hpp"
+     * 
+     * int main(){
+     *     Tina_TOOLS_string tina_str;
+     *     std::string user = tina_str.input("Votre choix : ");
+     *     std::cout << "Choix de l'utilisateur : " << user << std::endl;
+     *      // et la fonction input return les caractère entré par l'utilisateur 
+     *     return 0; 
+     * }
+     * ```
+    */
+    static std::string input(const std::string& prompt){
+        std::string user_message;
+        std::cout << prompt;
+        std::getline(std::cin, user_message);
+        return user_message;
+    }
+
 
 };
 

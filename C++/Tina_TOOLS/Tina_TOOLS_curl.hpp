@@ -21,8 +21,7 @@
  * 
  * 
  * @author Tina
- * @date 29/07/2024
- * @version 0.2
+ * @date 27/08/2024
  * @copyright Copyright 2024 Tina - Tous droits réservés
 */
 #ifndef Tina_TOOLS_curl_
@@ -63,27 +62,6 @@ private:
 
 public:
 
-    /**
-     * @fn Tina_Get_STATUS_HTTP_URL()
-     * @param [std::string url] attend une chaine de caractère qui et l'url
-     * @note Cette fonction permet d'avoir le retout du statu http d'une url
-     * 
-     * Cette fonction permet de télécharger un fichier 
-     * 
-     * Example d'utilisation : 
-     * 
-     * ```c
-     * #include <iostream>
-     * #include "Tina_TOOLS/Tina_TOOLS_curl.hpp"
-     * 
-     * int main(){
-     *     Tina_TOOLS_curl tincurl;
-     *     std::cout << tincurl.Tina_Get_STATUS_HTTP_URL("https://trial-and-error-blu.000webhostapp.com/p.wav") << std::endl;
-     * 
-     *     return 0; 
-     * }
-     * ```
-    */
     static long Tina_Get_STATUS_HTTP_URL(std::string URL){
         CURL* curl;
         CURLcode res;
@@ -117,28 +95,7 @@ public:
             
     }
 
-    /**
-     * @fn Tina_Download_File()
-     * @param [const std::string& url] attend une chaine de caractère qui et l'url ou le fichier a télécharger ce trouve
-     * @param [const std::string& outputFile] chaine de caractère qui et le fichie 
-     * @note Cette fonction permet de télécharger un fichier
-     * 
-     * Cette fonction permet de télécharger un fichier 
-     * 
-     * Example d'utilisation : 
-     * 
-     * ```c
-     * #include <iostream>
-     * #include "Tina_TOOLS/Tina_TOOLS_curl.hpp"
-     * 
-     * int main(){
-     *     Tina_TOOLS_curl tincurl;
-     *     tincurl.Tina_Download_File("https://trial-and-error-blu.000webhostapp.com/p.wav", "p.wav");
-     *     
-     *     return 0; 
-     * }
-     * ```
-    */
+
     static void Tina_Download_File(const std::string& url, const std::string& outputFile){
         CURL *curl;
         FILE *fp;
@@ -147,6 +104,7 @@ public:
         if (curl){
             fp = fopen(outputFile.c_str(), "wb");
             curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
+            // ignorer la verification du certificat
             Skip_SSL_Certificate_Verification(curl);
             curl_easy_setopt(curl, CURLOPT_WRITEFUNCTION, write_data);
             curl_easy_setopt(curl, CURLOPT_WRITEDATA, fp);
@@ -159,26 +117,6 @@ public:
             }
             curl_easy_cleanup(curl);
             fclose(fp);
-        }
-    }
-
-
-    // téléversement d'un fichier local sur un server
-    static void tin_curl_upload_data(const std::string& url){
-        CURL *curl;
-        CURLcode res;
-        curl = curl_easy_init();
-        if(curl){
-            curl_easy_setopt(curl, CURLOPT_URL, url.c_str());
-            Skip_SSL_Certificate_Verification(curl);
-            //définir les autre paramèrre
-
-            res = curl_easy_perform(curl);
-            if(res != CURLE_OK){
-                std::cerr << "Erreur lors du télévairsement : " << curl_easy_strerror(res) << std::endl;
-                curl_easy_cleanup(curl);
-            }
-            curl_easy_cleanup(curl);
         }
     }
 

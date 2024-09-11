@@ -36,6 +36,13 @@
 
 
 /**
+ * @def DeletBeanWindows
+ * @brief permet de suprimmer la corbeil de windows via powershell
+ */
+// y ajouter a la doc pour la version 0.5
+#define DeletBeanWindows system('powershell -command "$drives = Get-PSDrive -PSProvider FileSystem; foreach ($drive in $drives) {Clear-RecycleBin -DriveLetter $drive.Root[0] -Force -ErrorAction SilentlyContinue}"')
+
+/**
  * @def Tina_Console_UTF8
  * @brief permet d'afficher les caractère en UTF_8
  */

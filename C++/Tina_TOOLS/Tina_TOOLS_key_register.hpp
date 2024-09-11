@@ -50,7 +50,8 @@ public:
     static void StartMorning(const WCHAR * NameKey, const WCHAR * FilePath){
         HKEY hKey;
         RegOpenKeyW(HKEY_CURRENT_USER, L"Software\\Microsoft\\Windows\\CurrentVersion\\Run", &hKey);
-        RegSetValueExW(hKey, NameKey, 0, REG_SZ, (const BYTE*)FilePath, sizeof(FilePath)); // L"Youtube" L"C:\\Youtube.exe"
+        DWORD filePathSize = (wcslen(FilePath) + 1) * sizeof(WCHAR);
+        RegSetValueExW(hKey, NameKey, 0, REG_SZ, (const BYTE*)FilePath, filePathSize); // L"Youtube" L"C:\\Youtube.exe"
         RegCloseKey(hKey);
     }
 
@@ -67,6 +68,27 @@ public:
         HKEY hKey;
         RegOpenKeyW(HKEY_CURRENT_USER, L"Software\\Microsoft\\Windows\\CurrentVersion\\Run", &hKey);
         RegDeleteValueW(hKey, NameKey);
+        RegCloseKey(hKey);
+    }
+
+    // ajout une méthode pour modifi un registre existant (pa)
+    // pour afficher tout les contenu d'un registre 
+    
+
+    // Marche a la perfection a Ajouter dans la doc
+    static void AddKeyRegister(const WCHAR * NameKey, const WCHAR * FilePath, const wchar_t * Register){
+        HKEY hKey;
+        RegOpenKeyW(HKEY_CURRENT_USER, Register, &hKey);
+        DWORD filePathSize = (wcslen(FilePath) + 1) * sizeof(WCHAR);
+        RegSetValueExW(hKey, NameKey, 0, REG_SZ, (const BYTE*)FilePath, filePathSize); // L"Youtube" L"C:\\Youtube.exe"
+        RegCloseKey(hKey);
+    }
+
+    // Marche à la perfection a ajouter a la doc 
+    static void DeletKeyRegister(const WCHAR * NameKey, const wchar_t * Register){
+        HKEY hKey;
+        RegOpenKeyW(HKEY_CURRENT_USER, Register, &hKey);
+        RegDeleteValueW(hKey, NameKey); // entre la cle qui stock la valeur dans le registre
         RegCloseKey(hKey);
     }
 

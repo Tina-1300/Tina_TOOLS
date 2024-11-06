@@ -1,5 +1,7 @@
-#ifndef Tina_TOOLS_version_
-#define Tina_TOOLS_version_
+#pragma once
 #include <iostream>
-class Tina_TOOLS_version{public:static void Version(){std::cout << "Version : 0.5" << std::endl;}};
-#endif
+namespace Tina{
+    void Version(){
+        std::cout << "Version : 0.6" << std::endl;
+    };
+};

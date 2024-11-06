@@ -1,5 +1,5 @@
 const regedit = require('regedit'); // https://www.npmjs.com/package/regedit
-const { exec } = require('child_process');
+const {exec} = require('child_process');
 //const ffi = require('ffi-napi');
 
 
@@ -48,8 +48,6 @@ class Lana_REG{
         });
     }
 
-
-    
 }
 
 module.exports =  Lana_REG;

@@ -26,7 +26,7 @@
  * Sécurité ou Contributeurs vous avez le droit de me demander de mettre un lien dans Soutien à 
  * d'autres projet.
  * 
- * la version 0.3 de la librairie sort le 13 septembre 
+ * la version 0.7 de la librairie sort le 06 janvier 
  * 
  * Le projet et disponible uniquement sous windows pour l'instant 
  * il pourra être sous linux mais pas sous apple, car apple je les aimes pas trop 
@@ -43,7 +43,7 @@
  * 
  * @section sec_support Soutien à d'autres projets
  * Si vous souhaitez soutenir d'autres projets, voici quelques suggestions :
- * - **https://www.opencve.io/welcome**
+ * - **https://www.opencve.io/**
  * 
  * @section sec_download Téléchargement
  * Vous pouvez télécharger le projet Tina TOOLS sous forme d'archive ZIP en cliquant sur le lien suivant :
@@ -54,7 +54,7 @@
  * 
  * @section sec_information Information
  * @author Tina
- * @date 29/07/2024
- * @version 0.2
+ * @date 01/11/2024
+ * @version 0.6
  * @copyright Copyright 2024 Tina - Tous droits réservés
  */

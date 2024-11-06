@@ -19,7 +19,20 @@
 
 namespace Mathematique{
 
-    // ajouter ça a la documentation cette structures
+    // à mettre à la doc :
+    namespace Geometri{
+        
+        // a regarder si ces juste
+        template <typename T, typename A, typename Bh, typename C, typename W>
+        T trapeze(A B, Bh b, C h){
+            W res = B+b;
+            return res / 2 * h;
+        } 
+
+    };
+    // fin -------------------------------------------------------------------------
+
+
     namespace StructuresMath{
 
         // pour la v 0.7 ajouter un autre typename pour le denominateur
@@ -67,8 +80,27 @@ namespace Mathematique{
                 return sqrt(pow(hypotenuse, 2) - pow(otherSide, 2));
             };
 
+        };
+
+        namespace Thales{
+
+            template <typename A, typename B, typename C, typename D, typename Result1, typename Result2>
+            bool reciproque(A numerator1,B denominator1,C numerator2, D denominator2){
+                Result1 res1 = numerator1/denominator1;
+                Result2 res2 = numerator2/denominator2;
+                if(res1 == res2){
+                    return true;
+                }else{
+                    return false;
+                }
+            };
+
+        
+
+
 
         };
+
     };
 
 
